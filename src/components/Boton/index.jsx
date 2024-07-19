@@ -2,27 +2,30 @@ import styled from "styled-components";
 
 
 const BotonCategoria = styled.button`
-    width: 420px;
+    width: 390px;
     background-color: ${props => props.color || '#6bd1ff'};
     font-family: "RobotoBlack";
     font-style: normal;
-    font-size: 20px;
+    font-size: 24px;
     color: #ffffff;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 13px;
+    margin: 0 20px;
+    border-color: ${props => props.color || '#6bd1ff'};
+    border-radius: 12px;
     cursor: pointer;
 
     &:hover{
         background-color: #ffffff;
-        color: #4484a0;
-        border-radius: 9px;
+        color: #000030;
+        opacity: 1;
+        border-radius: 10px;
     }
 
 `
 
-const Boton = () => {
+const Boton = ({label, color}) => {
     return (
-    <BotonCategoria></BotonCategoria>)
+    <BotonCategoria color={color}>{label}</BotonCategoria>)
 }
 
 export default Boton

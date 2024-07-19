@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Boton from "../Boton";
+import Galeria from "../Galeria";
+
 
 
 const ContenedorSeccion = styled.div`
@@ -12,7 +14,6 @@ const ContenedorSeccion = styled.div`
     width: 100%;
     padding: 30px 0;
     flex-grow: 1;
-    background-color: #5656be;
 `
 
 const SeccionBoton = styled.section`
@@ -24,29 +25,29 @@ const SeccionBoton = styled.section`
     padding: 0 30px;
     width: 100%;
     height: auto;
-    background-color: #242469;
     box-sizing: border-box;
 `
 
 
-const SeccionLista = styled.section`
+const SeccionLista = styled.ul`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0 30px;
     width: 100%;
     height: auto;
-    background-color: #9292ed;
     box-sizing: border-box;
 `
 
 
-const Seccion = ({titulo, color}) => {
+const Seccion = ({botonlabel, botoncolor, sombreadointerno, listavideos}) => {
     return <ContenedorSeccion>
-        <SeccionBoton><Boton $color={color}>{titulo}</Boton></SeccionBoton><SeccionLista>Nuevo video</SeccionLista>
+        <SeccionBoton><Boton label={botonlabel} color={botoncolor} /></SeccionBoton><SeccionLista><Galeria shadowcolor={sombreadointerno} videosarreglo= {listavideos}></Galeria></SeccionLista>
     </ContenedorSeccion>
 }
 
 export default Seccion
+

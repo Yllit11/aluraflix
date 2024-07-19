@@ -31,18 +31,20 @@ const BannerParrafo = styled.div`
 
 const BotonBanner = styled.button`
     width: 200px;
-    background-color: #6bd1ff;
+    background-color: #68c4ee;
     font-family: "RobotoBlack";
     font-style: normal;
-    font-size: 20px;
+    font-size: 26px;
     color: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 12px;
+    border-color: #68c4ee;
+    border-radius: 10px;
     cursor: pointer;
 
     &:hover{
         background-color: #ffffff;
         color: #4484a0;
+        border-color: #ffffff;
         border-radius: 9px;
     }
 
@@ -83,7 +85,7 @@ const ContenedorBannerImagen = styled.img`
 const Banner = ({titulo, texto, backgroundImage, backgroundImageDerecha}) => {
     return (
     <ContenedorBannerPrincipal $backgroundImage={backgroundImage}>
-        <BannerParrafo><BotonBanner>FRONTEND</BotonBanner><TituloBanner>{titulo}</TituloBanner><ParrafoBanner>{texto}</ParrafoBanner></BannerParrafo>
+        <BannerParrafo><BotonBanner>FRONT END</BotonBanner><TituloBanner>{titulo}</TituloBanner><ParrafoBanner>{texto}</ParrafoBanner></BannerParrafo>
         <ContenedorBannerImagen $backgroundImageDerecha={backgroundImageDerecha}></ContenedorBannerImagen>
     </ContenedorBannerPrincipal>)
 }
